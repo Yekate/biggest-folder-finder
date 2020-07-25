@@ -8,9 +8,13 @@ public class Main
     public static void main(String[] args)
     {
 
-        String folderPath = "/Users/ekaterina/Desktop/special";
+        ParametersBag bag = new ParametersBag(args);
+
+        String folderPath = bag.getPath();
+        long sizeLimit = bag.getLimit();
+
         File file = new File(folderPath);
-        Node root = new Node(file);
+        Node root = new Node(file, sizeLimit);
 
         long start = System.currentTimeMillis();
 
