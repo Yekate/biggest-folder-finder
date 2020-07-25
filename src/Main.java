@@ -20,7 +20,7 @@ public class Main
         ForkJoinPool pool = new ForkJoinPool();
         pool.invoke(calculator);
 
-        System.out.println(root.getSize());
+        System.out.println(root);
 
 
         //System.out.println(getFolderSize(file));
